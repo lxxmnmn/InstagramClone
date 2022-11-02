@@ -1,202 +1,228 @@
-a{
+/* 공통 요소 */
+body {
+    background-color: #FAFAFA;
+}
+a {
     text-decoration: none;
 }
-.side{
-    width: 13%;
-    background-color: white;
-    float: left;
-    border-right: 1px solid lightgray;
+button {
+    border: none;
+    background-color: transparent;
+    width: auto;
 }
-.main{
-    width: 87%;
-    background-color: #FAFAFA;
-    float: right;
-}
-.area {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-}
-.txt_gray{
+.txt_gray {
     color: gray;
 }
-.txt_blue{
+.txt_blue {
     color: #0095f6;
     font-weight: bold;
 }
-.left_area{
-    width: 470px;
-    height: 3000px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* 1번 영역 */
-.story{
-    margin: 10px;
-    border-radius: 10px;
-}
-.story_profile{
-    padding: 5px 0px 0px 5px;
-}
-.story_img{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    border: 1px solid lightgray;
-    margin-bottom: 5px;
-    overflow: hidden;
-}
-.story_img > img, .profile_img > img, .account_img > img, .recommend_img > img{
+.story_img > img, .profile_img > img, .account_img > img, .recommend_img > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.story_id{
+.txt_small {
     font-size: 12px;
+}
+.feed_icon {
+    font-size: 28px;
+}
+.feed_tag {
+    color: #084298;
+}
+
+nav.menu {
+    position: fixed;
+    width: 230px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-right: 20px;
+    background-color: white;
+    border-right: 1px solid lightgray;
+}
+div.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px 0 0 230px;
+    font-size: 14px;
+}
+div.left_area {
+    width: 470px;
+    height: 3000px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+div.right_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 1번 영역 */
+section.story {
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+article.story_account {
+    width: fit-content;
+    margin: 5px 5px 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.story_img, .account_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #bbbbbb;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 /* 2번 영역 */
-.feed{
-    overflow:hidden;
+article.feed {
     height:auto;
     background-color: white;
-    margin: 10px;
+    overflow:hidden;
+    margin: 10px 10px 15px 10px;
+    border: 1px solid lightgray;
     border-radius: 10px;
 }
-.feed_header{
-    padding: 15px 5px 10px 15px;
+.feed_header {
+    height: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.feed_profile{
+.feed_profile {
     display: flex;
     align-items: center;
     float: left;
 }
-.profile_img, .recommend_img{
+.profile_img, .recommend_img {
     width: 30px;
     height: 30px;
-    border-radius: 15px;
-    border: 1px solid lightgray;
+    border-radius: 50%;
+    border: 1px solid #bbbbbb;
     overflow: hidden;
+    margin-right: 10px;
 }
-.profile_id{
-    padding: 0px 10px;
+.profile_id, .account_id {
     font-weight: bold;
 }
-.profile_more{
-    float: right;
+.profile_more {
+    vertical-align: center;
 }
-.feed_img{
+.feed_img {
     width: 100%;
     object-fit: contain;
 }
-.feed_button{
-    padding: 10px 0px 5px 12px;
+.feed_btn {
+    padding: 10px 12px 5px 12px;
     display: flex;
     justify-content: space-between;
 }
-.feed_icon{
-    font-size: 28px;
-    padding-right: 10px;
+.feed_btn > div:first-child > .feed_icon {
+    margin-right: 10px;
 }
-.feed_like{
-    padding: 0px 15px 2px 15px;
+.like_count {
+    padding: 0px 15px;
     font-weight: bold;
 }
-.feed_content{
+.feed_content, .feed_reply {
     padding: 5px 15px;
 }
-.feed_txt{
-    font-size: 14px;
-    margin-bottom: 2px;
+.feed_txt {
+    margin: 5px 0;
 }
-.reply_more{
+a.reply_more {
     padding: 0px 15px;
 }
-.feed_reply{
-    padding: 5px 15px;
-    display: flex;
-    flex-direction: column;
-}
-.reply_tag{
-    color: #084298;
-}
-.feed_time{
+.feed_time {
     font-size: 8px;
     padding: 0px 15px;
 }
-.reply_box{
-    display: flex;
-    align-items: center;
+.reply_box {
     border-top: 1px solid lightgray;
     margin-top: 15px;
-}
-.reply_box > div{
+    padding: 13px 17px 13px 13px;
     display: flex;
+    justify-content: space-between;
+}
+.reply_form {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
-.reply_input{
-    margin-left: 280px;
-    padding-right: 10px;
+.reply_input {
+    width: 340px;
+    border: 0;
+    font-size: 14px;
 }
-.reply_input > a{
+.reply_btn {
     opacity: 40%;
+    font-size: 14px;
+    margin-left: 15px;
+    padding: 0;
 }
 
 /* 3번 영역 */
-.right_area{
-    width: 300px;
-    height: 700px;
-    padding-top: 20px;
+aside {
+    width: 330px;
+    height: fit-content;
+    padding-top: 30px;
 }
-.account{
-    justify-content: space-between;
-}
-.account_txt{
-    display: flex;
-    flex-direction: column;
-}
-.name_content_txt{
-    font-size: 12px;
-    padding: 0px 10px;
-    color: gray;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 190px;
-}
-.big_profile_box {
-    width: 60px;
-    height: 60px;
-    border-radius: 70%;
-    overflow: hidden;
-}
-.account_img{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    border: 1px solid lightgray;
-    overflow: hidden;
-}
-.account_id{
-    font-weight: bold;
-}
-.account_exp{
-    font-size: 12px;
-}
-.recommend_box {
+.account_box {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0px;
-    font-size: 14px;
-    font-weight: bold;
     align-items: center;
 }
-.main_footer{
-    margin: 40px 0 0 5px;
-    font-size: 12px;
-    color: lightgray;
+.my_account, .recommend_account {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.account_img {
+    margin-right: 20px;
+}
+.account_txt, .recommend_txt {
     display: flex;
     flex-direction: column;
+}
+.account_id {
+    margin-bottom: 5px;
+}
+.recommend_title {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+.recommend_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.recommend_list > li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 10px 0;
+}
+footer {
+    width: 330px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: lightgray;
 }

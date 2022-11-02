@@ -4,127 +4,173 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instagram</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css" />
 	<!-- Google Icon -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<link rel="stylesheet" href="index.css" />
 </head>
 <body>
-	<div class="side"></div>
+	<nav class="menu"></nav>
 	<div class="main">
-		<div class="area">
-			<div class="left_area">
-				<!-- 1번 영역 -->
-				<div class="story panel panel-default">
-					<div class="panel-body">
-						<div class="story_profile">
-							<div class="story_img">
+		<div class="left_area">
+			<!-- 1번 영역 -->
+			<!-- 실제 인스타는 이 부분을 div와 li 태그로 처리했는데 뭐가 더 나은 방법인지? -->
+			<section class="story">
+				<article class="story_account">
+					<div class="story_img">
+						<img src="https://t1.daumcdn.net/news/202203/13/harmony/117f93fdf9314173aa34624581931ca8.jpg" />
+					</div>
+					<span class="story_id txt_small">p3achj3lly</span>
+				</article>
+			</section>
+			<!-- 2번 영역 -->
+			<section>
+				<article class="feed">
+					<div class="feed_header">
+						<div class="feed_profile">
+							<div class="profile_img">
 								<img src="https://t1.daumcdn.net/news/202203/13/harmony/117f93fdf9314173aa34624581931ca8.jpg" />
 							</div>
-							<span class="story_id">p3achj3lly</span>
+							<span class="profile_id">p3achj3lly</span>
 						</div>
+						<span class="profile_more feed_icon material-symbols-rounded">more_horiz</span>
 					</div>
-				</div>
-				<!-- 2번 영역 -->
-				<div>
-					<div class="feed panel panel-default">
-						<div class="feed_header panel-body">
-							<div class="feed_profile">
-								<div class="profile_img">
-									<img src="https://t1.daumcdn.net/news/202203/13/harmony/117f93fdf9314173aa34624581931ca8.jpg" />
-								</div>
-								<span class="profile_id">p3achj3lly</span>
-							</div>
-							<div class="profile_more">
-								<span class="feed_icon material-symbols-rounded">more_horiz</span>
-							</div>
+					<img class="feed_img" src="https://image-notepet.akamaized.net/article/201908/fb_aeb7b8aeaa53cd52cb6f69fda4deff88.jpg" />
+					<div class="feed_btn">
+						<div>
+							<!-- 인스타가 button 태그를 사용했길래 그 안에 span 태그를 넣고 싶었지만 정렬 실패로 span 태그만 사용 -->
+							<span class="feed_like feed_icon material-symbols-rounded">favorite</span>
+							<span class="reply_more feed_icon material-symbols-rounded">mode_comment</span>
+							<span class="feed_share feed_icon material-symbols-rounded">send</span>
 						</div>
 						<div>
-							<img class="feed_img" src="https://image-notepet.akamaized.net/article/201908/fb_aeb7b8aeaa53cd52cb6f69fda4deff88.jpg" />
-						</div>
-						<div class="feed_button">
-							<div>
-								<span class="feed_icon material-symbols-rounded">favorite</span>
-								<span class="feed_icon material-symbols-rounded">mode_comment</span>
-								<span class="feed_icon material-symbols-rounded">send</span>
-							</div>
-							<div>
-								<span class="feed_icon material-symbols-rounded">bookmark</span>
-							</div>
-						</div>
-						<div class="feed_like">
-							<p class="feed_txt">좋아요 2,704개</p>
-						</div>
-						<div class="feed_content panel-body">
-							<p class="feed_txt">
-								<strong>p3achj3lly</strong>
-								자고 일어났더니.. '삼각김밥' 되어버린 강아지
-							</p>
-						</div>
-						<div class="reply_more">
-							<a class="txt_gray">댓글 25개 모두 보기</a>
-						</div>
-						<div class="feed_reply panel-body">
-							<p class="feed_txt">
-								<strong>dynamic_ddd</strong> 와 너무 귀여워요
-							</p>
-							<p class="feed_txt">
-								<strong>abc123</strong> <span class="reply_tag">@dynamic_ddd</span> 비숑 키우는 사람들 부럽다
-							</p>
-						</div>
-						<div class="feed_time">
-							<span class="txt_gray">5일 전</span>
-						</div>
-						<div class="reply_box panel-body">
-							<div>
-								<span class="feed_icon material-symbols-rounded">sentiment_satisfied</span>
-								<span class="txt_gray">댓글 달기...</span>
-							</div>
-							<div class="reply_input txt_blue">
-								<a>게시</a>
-							</div>
+							<span class="feed_bookmark feed_icon material-symbols-rounded">bookmark</span></button>
 						</div>
 					</div>
-				</div>
-			</div>
-			<!-- 3번 영역 -->
-			<div class="right_area">
-				<div class="account">
-					<div>
+					<p class="like_count feed_txt">좋아요 2,704개</p>
+					<p class="feed_content feed_txt">
+						<strong>p3achj3lly</strong>
+						자고 일어났더니.. '삼각김밥' 되어버린 강아지
+					</p>
+					<a class="reply_more txt_gray">댓글 25개 모두 보기</a>
+					<div class="feed_reply">
+						<p class="feed_txt">
+							<strong>dynamic_ddd</strong> 와 너무 귀여워요
+						</p>
+						<p class="feed_txt">
+							<strong>abc123</strong> <span class="feed_tag">@dynamic_ddd</span> 비숑 키우는 사람들 부럽다
+						</p>
+					</div>
+					<p class="feed_time txt_gray feed_txt">5일 전</p>
+					<div class="reply_box">
+						<span class="feed_icon material-symbols-rounded">sentiment_satisfied</span>
+						<form class="reply_form">
+							<input type="text" class="reply_input txt_gray" placeholder="댓글 달기..." />
+							<button type="button" class="reply_btn txt_blue">게시</button>
+						</form>
+					</div>
+				</article>
+				<article class="feed">
+					<div class="feed_header">
+						<div class="feed_profile">
+							<div class="profile_img">
+								<img src="https://t1.daumcdn.net/news/202203/13/harmony/117f93fdf9314173aa34624581931ca8.jpg" />
+							</div>
+							<span class="profile_id">p3achj3lly</span>
+						</div>
+						<span class="profile_more feed_icon material-symbols-rounded">more_horiz</span>
+					</div>
+					<img class="feed_img" src="https://image-notepet.akamaized.net/article/201908/fb_aeb7b8aeaa53cd52cb6f69fda4deff88.jpg" />
+					<div class="feed_btn">
+						<div>
+							<!-- 인스타가 button 태그를 사용했길래 그 안에 span 태그를 넣고 싶었지만 정렬 실패로 span 태그만 사용 -->
+							<span class="feed_like feed_icon material-symbols-rounded">favorite</span>
+							<span class="reply_more feed_icon material-symbols-rounded">mode_comment</span>
+							<span class="feed_share feed_icon material-symbols-rounded">send</span>
+						</div>
+						<div>
+							<span class="feed_bookmark feed_icon material-symbols-rounded">bookmark</span></button>
+						</div>
+					</div>
+					<p class="like_count feed_txt">좋아요 2,704개</p>
+					<p class="feed_content feed_txt">
+						<strong>p3achj3lly</strong>
+						자고 일어났더니.. '삼각김밥' 되어버린 강아지
+					</p>
+					<a class="reply_more txt_gray">댓글 25개 모두 보기</a>
+					<div class="feed_reply">
+						<p class="feed_txt">
+							<strong>dynamic_ddd</strong> 와 너무 귀여워요
+						</p>
+						<p class="feed_txt">
+							<strong>abc123</strong> <span class="feed_tag">@dynamic_ddd</span> 비숑 키우는 사람들 부럽다
+						</p>
+					</div>
+					<p class="feed_time txt_gray feed_txt">5일 전</p>
+					<div class="reply_box">
+						<span class="feed_icon material-symbols-rounded">sentiment_satisfied</span>
+						<form class="reply_form">
+							<input type="text" class="reply_input txt_gray" placeholder="댓글 달기..." />
+							<button type="button" class="reply_btn txt_blue">게시</button>
+						</form>
+					</div>
+				</article>
+			</section>
+		</div>
+		<!-- 3번 영역 -->
+		<div class="right_area">
+			<aside>
+				<!-- div 사용을 최소화하고 싶었지만 각각 정렬해야 해서 더 이상 줄일 수 없었음 -->
+				<div class="account_box">
+					<div class="my_account">
 						<div class="account_img">
 							<img src="https://t1.daumcdn.net/news/202203/13/harmony/117f93fdf9314173aa34624581931ca8.jpg" />
 						</div>
 						<div class="account_txt">
 							<span class="account_id">p3achj3lly</span>
-							<span class="account_exp txt_gray">민정</span>
+							<span class="account_info txt_small txt_gray">민정</span>
 						</div>
 					</div>
-					<div>
-						<a class="account_change txt_blue">전환</a>
-					</div>
+					<a class="account_change txt_small txt_blue">전환</a>
 				</div>
-				<div class="recommend_box">
-					<span class="txt_gray"> 회원님을 위한 추천</span>
-					<span style="font-size: 12px">모두 보기</span>
+				<div class="recommend_title">
+					<span class="txt_gray">회원님을 위한 추천</span>
+					<a class="recommend_more txt_small">모두 보기</a>
 				</div>
-				<div>
-					<div class="feed_name">
-						<div class="recommend_img">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/640px-Black_colour.jpg" />
+				<ul class="recommend_list">
+					<li>
+						<div class="recommend_account">
+							<div class="recommend_img">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/640px-Black_colour.jpg" />
+							</div>
+							<div class="recommend_txt">
+								<span class="account_id">dynamic_ddd</span>
+								<span class="account_info txt_small txt_gray">xxx님이 팔로우합니다</span>
+							</div>
 						</div>
-						<div class="account_txt">
-							<span class="account_id">dynamic_ddd</span>
-							<span class="account_exp txt_gray">xxx님이 팔로우합니다</span>
+						<a class="recommend_follow txt_small txt_blue">팔로우</a>
+					</li>
+					<li>
+						<div class="recommend_account">
+							<div class="recommend_img">
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/640px-Black_colour.jpg" />
+							</div>
+							<div class="recommend_txt">
+								<span class="account_id">dynamic_ddd</span>
+								<span class="account_info txt_small txt_gray">회원님을 위한 추천</span>
+							</div>
 						</div>
-						<a class="recommend_follow txt_blue">팔로우</a>
-					</div>
-				</div>
-				<div class="main_footer">
-					<p>소개 &middot; 도움말 &middot; 홍보 센터 &middot; API &middot; 채용 정보 &middot; 개인정보처리방침 &middot; 약관 &middot; 위치 &middot; 언어</p>
-					<p>&copy; 2022 INSTAGRAM FROM META</p>
-				</div>
-			</div>
+						<a class="recommend_follow txt_small txt_blue">팔로우</a>
+					</li>
+				</ul>
+			</aside>
+			<footer>
+				<p>
+					<a>소개</a> &middot; <a>도움말</a> &middot; <a>홍보 센터</a> &middot; <a>API</a> &middot;
+					<a>채용 정보</a> &middot; <a>개인정보처리방침</a> &middot;<br/><a>약관</a> &middot; <a>위치</a> &middot; <a>언어</a>
+				</p>
+				<p>&copy; 2022 INSTAGRAM FROM META</p>
+			</footer>
 		</div>
 	</div>
 </body>
