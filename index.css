@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /* 공통 요소 */
 body {
     background-color: #FAFAFA;
@@ -6,9 +54,12 @@ a {
     text-decoration: none;
 }
 button {
+    margin: 0;
+    padding: 0;
     border: none;
     background-color: transparent;
-    width: auto;
+    width: fit-content;
+    height: fit-content;
 }
 .txt_gray {
     color: gray;
@@ -26,10 +77,15 @@ button {
     font-size: 12px;
 }
 .feed_icon {
-    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
 }
 .feed_tag {
     color: #084298;
+}
+.feed_id, .reply_id {
+    font-weight: bold;
 }
 
 nav.menu {
@@ -70,9 +126,15 @@ section.story {
     border: 1px solid lightgray;
     border-radius: 10px;
 }
-article.story_account {
+.story_list {
     width: fit-content;
-    margin: 5px 5px 0 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.story_list > li {
+    list-style: none;
+    margin: 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,41 +180,37 @@ article.feed {
 .profile_id, .account_id {
     font-weight: bold;
 }
-.profile_more {
-    vertical-align: center;
-}
 .feed_img {
     width: 100%;
     object-fit: contain;
 }
 .feed_btn {
-    padding: 10px 12px 5px 12px;
+    padding: 10px 12px 12px 12px;
     display: flex;
     justify-content: space-between;
 }
-.feed_btn > div:first-child > .feed_icon {
+.feed_btn > div:first-child > button {
     margin-right: 10px;
 }
-.like_count {
-    padding: 0px 15px;
+.feed_like {
+    padding: 5px 15px;
     font-weight: bold;
 }
-.feed_content, .feed_reply {
+.feed_content {
+    padding: 10px 15px;
+}
+.reply_more.txt_gray, .feed_reply {
     padding: 5px 15px;
 }
-.feed_txt {
-    margin: 5px 0;
-}
-a.reply_more {
-    padding: 0px 15px;
+.feed_reply > p {
+    padding: 4px 0;
 }
 .feed_time {
     font-size: 8px;
-    padding: 0px 15px;
+    padding: 5px 15px 15px 15px;
 }
 .reply_box {
     border-top: 1px solid lightgray;
-    margin-top: 15px;
     padding: 13px 17px 13px 13px;
     display: flex;
     justify-content: space-between;
@@ -210,8 +268,6 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0;
-    padding: 0;
 }
 .recommend_list > li {
     list-style: none;
@@ -223,6 +279,10 @@ aside {
 footer {
     width: 330px;
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 12px;
     color: lightgray;
+}
+footer > p {
+    padding: 10px 0;
+    line-height: 1.5;
 }
