@@ -52,6 +52,7 @@ body {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 button {
     margin: 0;
@@ -60,6 +61,7 @@ button {
     background-color: transparent;
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
 .txt_gray {
     color: gray;
@@ -146,6 +148,7 @@ section.story {
     border: 1px solid #bbbbbb;
     margin-bottom: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* 2번 영역 */
@@ -176,6 +179,7 @@ article.feed {
     border: 1px solid #bbbbbb;
     overflow: hidden;
     margin-right: 10px;
+    cursor: pointer;
 }
 .profile_id, .account_id {
     font-weight: bold;
@@ -242,6 +246,7 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
 }
 .my_account, .recommend_account {
     display: flex;
@@ -251,10 +256,6 @@ aside {
 .account_img {
     margin-right: 20px;
 }
-.account_txt, .recommend_txt {
-    display: flex;
-    flex-direction: column;
-}
 .account_id {
     margin-bottom: 5px;
 }
@@ -262,7 +263,7 @@ aside {
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    margin: 12px 0;
+    padding: 15px 0;
 }
 .recommend_list {
     display: flex;
